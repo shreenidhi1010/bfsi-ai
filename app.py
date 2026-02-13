@@ -8,8 +8,9 @@ st.write("AI assistant for loan, EMI and banking queries")
 with open("bfsi_dataset.json") as f:
     data = json.load(f)
 
-questions = [item["input"].lower() for item in data]
-answers = [item["output"] for item in data]
+questions = [item["question"].lower() for item in data]
+answers = [item["answer"] for item in data]
+
 
 st.markdown("### Ask your banking question:")
 
